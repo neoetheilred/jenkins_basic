@@ -5,16 +5,12 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo ok'
+                echo 'try echo'
             }
         }
         stage('Test') {
-            when {
-                expression {
-                    // build was successful
-                }
-            }
             steps {
-                sh 'we did nothing'
+                sh 'echo we did nothing'
             }
         }
     }
